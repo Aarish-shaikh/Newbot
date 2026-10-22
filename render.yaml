@@ -1,0 +1,51 @@
+databases:
+  - name: evolution-db
+    databaseName: evolution
+    user: evolution
+    plan: free
+    region: frankfurt
+
+services:
+  - type: web
+    name: evolution-api
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    region: frankfurt
+    envVars:
+      - key: PORT
+        value: 8080
+      - key: SERVER_URL
+        sync: false
+      - key: AUTHENTICATION_TYPE
+        value: apikey
+      - key: AUTHENTICATION_API_KEY
+        generateValue: true
+      - key: AUTHENTICATION_EXPOSE_IN_FETCH_INSTANCES
+        value: "true"
+      - key: DATABASE_ENABLED
+        value: "true"
+      - key: DATABASE_PROVIDER
+        value: postgresql
+      - key: DATABASE_CONNECTION_URI
+        fromDatabase:
+          name: evolution-db
+          property: connectionString
+      - key: DATABASE_SAVE_DATA_INSTANCE
+        value: "true"
+      - key: DATABASE_SAVE_DATA_NEW_MESSAGE
+        value: "true"
+      - key: DATABASE_SAVE_MESSAGE_UPDATE
+        value: "true"
+      - key: DATABASE_SAVE_DATA_CONTACTS
+        value: "true"
+      - key: DATABASE_SAVE_DATA_CHATS
+        value: "true"
+      - key: CACHE_REDIS_ENABLED
+        value: "false"
+      - key: DEL_INSTANCE
+        value: "false"
+      - key: CONFIG_SESSION_PHONE_CLIENT
+        value: Evolution API
+      - key: CONFIG_SESSION_PHONE_NAME
+        value: Chrome
