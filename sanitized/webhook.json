@@ -1,0 +1,9 @@
+{
+  "enabled": true,
+  "url": "{{MY_WEBHOOK_URL}}",
+  "webhookByEvents": false,
+  "events": [
+    "MESSAGES_UPSERT"
+  ],
+  "webhookBase64": false
+}

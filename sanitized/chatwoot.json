@@ -1,0 +1,13 @@
+{
+  "enabled": true,
+  "accountId": "{{CHATWOOT_ACCOUNT_ID}}",
+  "token": "{{CHATWOOT_TOKEN}}",
+  "url": "{{CHATWOOT_URL}}",
+  "nameInbox": "WhatsApp",
+  "signMsg": false,
+  "reopenConversation": true,
+  "conversationPending": false,
+  "importContacts": false,
+  "importMessages": false,
+  "autoCreate": true
+}

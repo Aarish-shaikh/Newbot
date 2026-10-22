@@ -1,0 +1,5 @@
+{
+  "instanceName": "{{MY_INSTANCE_NAME}}",
+  "integration": "WHATSAPP-BAILEYS",
+  "clientName": "evolution"
+}

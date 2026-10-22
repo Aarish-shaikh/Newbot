@@ -1,0 +1,14 @@
+{
+  "expire": 300,
+  "keywordFinish": "bye",
+  "delayMessage": 1000,
+  "unknownMessage": "Sorry, I dont understand",
+  "listeningFromMe": true,
+  "stopBotFromMe": true,
+  "keepOpen": false,
+  "debounceTime": 1,
+  "ignoreJids": [],
+  "splitMessages": false,
+  "timePerChar": 0,
+  "fallbackId": "{{FALLBACK_BOT_ID}}"
+}
